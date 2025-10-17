@@ -17,5 +17,5 @@ WORKDIR /app
 COPY --from=builder /app/target/*.jar app.jar
 
 EXPOSE 2000
-#expose port no and server.port no should be same
+# expose port no and server.port no should be same
 ENTRYPOINT ["java", "-jar", "app.jar"]
