@@ -16,7 +16,7 @@ services:
     image: 2300033794/docker-backend:latest
     container_name: springboot-backend
     ports:
-      - "2025:2000"
+      - "2026:2000"  # Changed from 2025 to 2026
     depends_on:
       - mysqldb
     restart: on-failure
@@ -27,7 +27,7 @@ services:
     image: 2300033794/docker-frontend:latest
     container_name: react-frontend
     ports:
-      - "3000:80"
+      - "9000:80"
     depends_on:
       - backend
     restart: on-failure
